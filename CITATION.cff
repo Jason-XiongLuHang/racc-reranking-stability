@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Please cite the manuscript when using these reproducibility materials."
+type: software
+title: "RACC Reranking Stability: Reproducibility Materials"
+version: "ijtst-submission-locked"
+license: MIT
+authors:
+  - family-names: Xiong
+    given-names: Luhang
+preferred-citation:
+  type: unpublished
+  title: "How Stable Are Post-hoc Trajectory Reranking Gains? Scaling and Independent Confirmation in Automated Driving"
+  authors:
+    - family-names: Xiong
+      given-names: Luhang
+  year: 2026
+  notes: "IJTST submission manuscript; publication DOI not assigned."

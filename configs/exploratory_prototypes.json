@@ -1,0 +1,49 @@
+{
+  "role": "exploratory; frozen failed prototypes, not final confirmation",
+  "split": {
+    "train": 700,
+    "calibration": 150,
+    "internal_validation": 150,
+    "source": "consumed development eval1000",
+    "grouping": "scene; all conditions follow parent scene",
+    "validation_reuse": "Q validation consumed previously by U"
+  },
+  "seeds": [
+    2026,
+    2027,
+    2028,
+    2029,
+    2030
+  ],
+  "features": 25,
+  "architecture": [
+    25,
+    32,
+    1
+  ],
+  "activation": "ReLU hidden layer",
+  "optimizer": "Adam",
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "batch_size_scenes": 16,
+  "steps": 500,
+  "checkpoint_rule": "final only",
+  "upstream": "frozen N5000 DU proposal; no reranking candidate change",
+  "U": {
+    "target": "harmful DU-selected switch; tolerance 1e-6 m",
+    "loss": "unweighted BCE",
+    "output": "sigmoid",
+    "temperature": "calibration150 only; log-temperature bounded log(0.05)..log(20), deterministic scalar minimize tol1e-6 max500",
+    "acceptance": "calibrated harmful risk <=0.20"
+  },
+  "Q": {
+    "target": "realized utility ADE_baseline-ADE_selected",
+    "loss": "pinball tau=0.20",
+    "output": "linear",
+    "acceptance": "q20>0",
+    "calibration150": "unused"
+  },
+  "sweeps": false,
+  "fresh500_for_fit_or_eval": false,
+  "new_holdout1000_for_fit_or_eval": false
+}

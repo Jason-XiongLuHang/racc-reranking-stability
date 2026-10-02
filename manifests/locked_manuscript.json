@@ -1,0 +1,29 @@
+{
+  "status": "IJTST_SUBMISSION_LOCKED",
+  "version": "literature-only revision after humanized v1",
+  "title": "How Stable Are Post-hoc Trajectory Reranking Gains? Scaling and Independent Confirmation in Automated Driving",
+  "author": "Luhang Xiong",
+  "files": {
+    "ijtst_manuscript.docx": {
+      "logical_path": "manuscript/ijtst_manuscript.docx",
+      "sha256": "1608385f2f3f6a3edf893c5d66e88015d75b7abc658f0e034f2ac03a0f14e52e",
+      "included": false
+    },
+    "ijtst_manuscript.pdf": {
+      "logical_path": "manuscript/ijtst_manuscript.pdf",
+      "sha256": "557be06210fe06471c7101a0133774fc1d489eb45d01f60462ceaaa9e8df4b54",
+      "included": false
+    },
+    "ijtst_manuscript_source.md": {
+      "logical_path": "manuscript/ijtst_manuscript_source.md",
+      "sha256": "ae213f7800c842871cba609f5f8033c00bc8294850922016abc136257be14fd2",
+      "included": false
+    }
+  },
+  "lock_audit": {
+    "original_sha256": "242f72fd0aadcd39af12a25a64604b0de638e820d5cac7bf2cd4eec9fff0b728",
+    "P0": 0,
+    "P1": 0
+  },
+  "publication_status": "submission draft; no publication DOI assigned"
+}

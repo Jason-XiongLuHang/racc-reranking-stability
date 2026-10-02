@@ -1,0 +1,2 @@
+contrast,role,estimate_m,ci95_lower_m,ci95_upper_m,interval_supported,design,scenes_a,scenes_b,fixed_seeds,bootstrap_replicates,rng_seed,d_clean_m,d_corruption_m
+d_corruption-d_clean,secondary,0.041102465497764445,0.0166400113446995,0.06766574650250841,True,paired_scene,1000,,5,10000,2026,-8.820271641015598e-05,0.04101426278135429

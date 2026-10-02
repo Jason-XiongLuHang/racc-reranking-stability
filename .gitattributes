@@ -1,0 +1,2 @@
+# Preserve released bytes across checkouts; the SHA256 manifest is byte-sensitive.
+* -text

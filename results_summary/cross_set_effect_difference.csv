@@ -1,0 +1,3 @@
+contrast,role,estimate_m,ci95_lower_m,ci95_upper_m,interval_supported,design,scenes_a,scenes_b,fixed_seeds,bootstrap_replicates,rng_seed,d_dev_m,d_other_m,same_checkpoint_hashes
+d_dev-d_fresh,requested_cross_set,0.039996420463381636,-0.004122555433373137,0.08516834858008253,False,independent_scene_sets,1000,500,5,10000,2026,0.03514248199595937,-0.004853938467422267,True
+d_dev-d_confirm_same_N5000,secondary,0.03238954962859197,-0.006817596375009574,0.07351848156066076,False,independent_scene_sets,1000,1000,5,10000,2026,0.03514248199595937,0.0027529323673674026,True

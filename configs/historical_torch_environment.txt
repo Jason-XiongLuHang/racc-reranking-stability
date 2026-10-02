@@ -1,0 +1,7 @@
+# Optional legacy condition/failure scripts, in a SEPARATE environment
+# Python 3.11 (prototype locks: 3.11.16); CPU threads=1
+numpy==1.26.4
+# Historical torch container identity was 2.4.1+cu124.
+# Obtain the matching build from the official PyTorch distribution as needed.
+torch==2.4.1
+# This is a minimum dependency record, not a complete upstream backbone environment.

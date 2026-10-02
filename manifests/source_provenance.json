@@ -1,0 +1,41 @@
+{
+  "public_sources": [
+    {
+      "original_name": "analyze_effect_heterogeneity.py",
+      "original_sha256": "3cc79a5108893d04f36b9a124a176515888ac37f7cf1f243041c656bd6dea9b9",
+      "public_path": "scripts/analyze_effect_heterogeneity.py",
+      "public_sha256": "5aa4b71dc9388abebb093c9b69350e111a0ba8337e1d1a5688514863c4430dec",
+      "adaptation": "relative input/output paths and private source-path mapping only; no model/loss/statistical change"
+    },
+    {
+      "original_name": "decompose_conditions.py",
+      "original_sha256": "3a257f8baaf9b2fde642e14197ab91771a08bffec078c68482314947d7065317",
+      "public_path": "scripts/decompose_conditions.py",
+      "public_sha256": "6d1a9199a71d29438401ddc0208cf0e797ead9acfe79a40f424315a34e1eb780",
+      "adaptation": "relative input/output paths and private source-path mapping only; no model/loss/statistical change"
+    },
+    {
+      "original_name": "analyze_fresh_failure.py",
+      "original_sha256": "172a7765c6309b20381830a5d279b256ca2c622f679faeb9bafd370c105a2545",
+      "public_path": "scripts/failure_analysis/analyze_fresh_failure.py",
+      "public_sha256": "bb3431deb96fedd3d627e22b8fb5b06e9874ad4bdf5f0a540b4d8a2500d5ebf1",
+      "adaptation": "relative input/output paths and private source-path mapping only; no model/loss/statistical change"
+    },
+    {
+      "original_name": "failure_inputs.py",
+      "original_sha256": "a6b1684c265a6fe5414ec0b585ba0c86c5b69b936ca1637ad2a80183a24dc7f2",
+      "public_path": "scripts/failure_analysis/failure_inputs.py",
+      "public_sha256": "3d4fd15dc36a062cb38bab802bcd26dad0d725af7b7438130025c0d92ea04020",
+      "adaptation": "relative input/output paths and private source-path mapping only; no model/loss/statistical change"
+    },
+    {
+      "original_name": "failure_scores.py",
+      "original_sha256": "4a40e32e24e52c0833bd4df11cf7e32e5afe1867d13b30193a8d61c6fb2e47c0",
+      "public_path": "scripts/failure_analysis/failure_scores.py",
+      "public_sha256": "ef7a75a6ab7727394468062a3d738c5892d5ec8c7105ab5ce1d5ffc03aa68e75",
+      "adaptation": "relative input/output paths and private source-path mapping only; no model/loss/statistical change"
+    }
+  ],
+  "original_training_sources_included": false,
+  "absent_sources_are_not_reimplemented": true
+}

@@ -1,0 +1,128 @@
+{
+  "train_sizes": [
+    700,
+    1500,
+    3000,
+    5000
+  ],
+  "seeds": [
+    2026,
+    2027,
+    2028,
+    2029,
+    2030
+  ],
+  "conditions": [
+    "clean",
+    "focal_keep30",
+    "focal_keep20",
+    "focal_keep10",
+    "context_keep30",
+    "context_keep20",
+    "context_keep10"
+  ],
+  "steps": {
+    "700": {
+      "pairwise": 400,
+      "du": 500,
+      "c1_per_head": 1600
+    },
+    "1500": {
+      "pairwise": 857,
+      "du": 1071,
+      "c1_per_head": 3429
+    },
+    "3000": {
+      "pairwise": 1714,
+      "du": 2143,
+      "c1_per_head": 6857
+    },
+    "5000": {
+      "pairwise": 2857,
+      "du": 3571,
+      "c1_per_head": 11429
+    },
+    "10000": {
+      "pairwise": 5714,
+      "du": 7143,
+      "c1_per_head": 22857
+    }
+  },
+  "checkpoint_rule": "final step only; no early stopping or evaluation-based selection",
+  "cpu_threads": 1,
+  "optimizer": "Adam",
+  "optimizer_defaults": {
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "amsgrad": false
+  },
+  "pairwise": {
+    "architecture": [
+      12,
+      64,
+      32,
+      1
+    ],
+    "hidden_activation": "ReLU",
+    "final_init": "zero weights and bias",
+    "loss": "frozen Original RankNet on centered q; original pair/tie handling",
+    "inference": "argmax(z+centered q)",
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 16,
+    "batch_unit": "scene-condition records; uniform sampling with replacement",
+    "rng_seed": "nominal seed",
+    "normalizer": "train-only mode12 and scene10"
+  },
+  "du": {
+    "architecture": [
+      13,
+      64,
+      32,
+      1
+    ],
+    "hidden_activation": "ReLU",
+    "final_init": "zero output",
+    "input": "[phi_k-phi_b,z_k-z_b]",
+    "target": "ADE_baseline-ADE_candidate",
+    "loss": "equal-candidate MSE over five nonbaseline candidates",
+    "inference": "max positive utility; baseline utility exactly zero",
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 16,
+    "batch_unit": "scene-condition records, five nonbaseline candidates each",
+    "rng_seed": "5*nominal seed",
+    "actual_seeds": [
+      10130,
+      10135,
+      10140,
+      10145,
+      10150
+    ],
+    "sampling": "precomputed CPU torch.randint [updates,16]",
+    "normalizer": "train-only population std; clamp minimum 1e-6"
+  },
+  "c1": {
+    "input_shape": [
+      60,
+      8
+    ],
+    "architecture": "Conv1d8->16,k3,p1,ReLU; Conv1d16->16,k3,p1,ReLU; temporal mean/max pooling; Linear32->1",
+    "parameters": 1217,
+    "hybrid": false,
+    "loss": "SmoothL1(beta=1), ADE_baseline-ADE_pairwise_selected",
+    "lr": 0.001,
+    "weight_decay": 0,
+    "batch_size": 64,
+    "batch_unit": "changed upstream proposals; min(pool,64) if smaller",
+    "heads": 5,
+    "folds": "sort scene IDs, shuffle Python Random(2026), index modulo 5",
+    "fold_seed": "nominal seed+100000*fold",
+    "upstream": "same-N/seed frozen Pairwise fitted on full training prefix; entire pipeline is not out-of-fold",
+    "inference": "mean of five normalized head outputs >0 accepts upstream proposal; otherwise baseline"
+  },
+  "original_training_sources_included": false
+}

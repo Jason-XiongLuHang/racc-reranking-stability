@@ -1,0 +1,49 @@
+{
+  "payloads_included": false,
+  "scene_ids_included": false,
+  "development": {
+    "train_prefixes": [
+      700,
+      1500,
+      3000,
+      5000
+    ],
+    "evaluation_scenes": 1000,
+    "conditions": 7,
+    "role": "development"
+  },
+  "clean_QCNet": {
+    "evaluation_scenes": 1000,
+    "conditions": 1,
+    "independent_from_development": "not established"
+  },
+  "EMP_M": {
+    "evaluation_scenes": 1000,
+    "conditions": 1,
+    "role": "unmatched clean-only second-backbone confirmation"
+  },
+  "confirm1000": {
+    "evaluation_scenes": 1000,
+    "conditions": 7,
+    "models_N": [
+      5000,
+      10000
+    ],
+    "role": "separate-scene confirmation"
+  },
+  "fresh500": {
+    "evaluation_scenes": 500,
+    "conditions": 7,
+    "role": "consumed final holdout; subsequently diagnostic",
+    "untouched_now": false
+  },
+  "new_holdout1000": {
+    "unique_scenes": 1000,
+    "ids_sha256": "43070abce13538d8868cc35b6d5fe149382cfdcd9363555e7e217f06fd734877",
+    "used_in_paper_results": false,
+    "payload_opened_by_task": false,
+    "performance_read": false,
+    "ids_included": false,
+    "scope": "metadata-only known-registry disjointness; not exhaustive historical access proof"
+  }
+}

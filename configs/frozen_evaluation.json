@@ -1,0 +1,24 @@
+{
+  "primary_metric": "top-1 ADE in meters",
+  "comparison": "Pairwise ADE-DU ADE; positive favors DU",
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 2026,
+    "interval": "95% percentile",
+    "unit": "scene",
+    "aggregation": "mean five frozen seed pairs within scene-condition, then equal condition means within scene",
+    "paired_contrasts": "same-scene resampling",
+    "cross_set_contrasts": "independent scene draws for each set, subtract replicate means",
+    "effect_analysis_rng_order": "10 batches of 1000; draw set A then set B each batch",
+    "seeds_resampled": false,
+    "condition_CIs_averaged": false
+  },
+  "final_success_rule": {
+    "mean_min_m": 0.01,
+    "positive_seeds_min": 4,
+    "every_LOSO_mean_positive": true,
+    "CI_lower_positive": true
+  },
+  "retrospective_primary": "N5000-N700 within development; primary only in retrospective analysis",
+  "secondary_scale_contrasts_multiplicity_corrected": false
+}

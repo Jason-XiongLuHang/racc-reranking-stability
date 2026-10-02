@@ -1,0 +1,2 @@
+# NumPy-only effect analysis; historical version retained
+numpy==2.3.5

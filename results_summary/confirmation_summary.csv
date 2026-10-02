@@ -1,0 +1,7 @@
+Setting / evidence role,N,Pairwise−DU,95% CI
+development eval1000 Development reference,5000,+0.035142,"[0.008185, 0.063504]"
+"QCNet clean-only; fixed eval1000, independence unestablished Confirmatory cross-setting",5000,+0.007381,"[−0.020911, 0.035660]"
+EMP-M clean-only; not fully matched Confirmatory cross-setting,5000,−0.000148,"[−0.028610, 0.028301]"
+confirm1000 Confirmatory separate scenes,5000,+0.002753,"[−0.026925, 0.030858]"
+confirm1000 (same set) Confirmatory separate scenes,10000,+0.005758,"[−0.020608, 0.032030]"
+fresh500 Final holdout,5000,−0.004854,"[−0.041376, 0.030742]"

@@ -1,0 +1,33 @@
+{
+  "archives": {
+    "development_results": {
+      "expected_relative_path": "inputs/development_results.zip",
+      "original_sha256": "4c9ae1f4ed8b40cd4de2a097cac937a0e56059ef7390bf56f113a887377d22f3",
+      "included": false
+    },
+    "development_cache": {
+      "expected_relative_path": "inputs/development_cache.zip",
+      "original_sha256": "929d98e49f5ff9c9c7ff2efa48171b5f4e36fc7ec016cac95fdd7cbb8aaec7f6",
+      "included": false
+    },
+    "fresh_results": {
+      "expected_relative_path": "inputs/fresh500_results.zip",
+      "original_sha256": "dab1bf4607d988c246b2cc61f6c7d665d1b5680d7a37bd4c592ad5882baed95e",
+      "included": false
+    },
+    "confirmation_results": {
+      "expected_relative_path": "inputs/confirmation_results.zip",
+      "original_sha256": "be5396dc5fdc9b98daba74fbe377589d06ca8e4aad48a800435ab2f0f944ebdf",
+      "included": false
+    },
+    "confirmation_cache": {
+      "expected_relative_path": "inputs/confirmation_cache.zip",
+      "original_sha256": "69a5bb407f95999dc182b2674f41f487e911b5b334740c2fe6b0c8c33c535848",
+      "included": false
+    }
+  },
+  "development_cache_freeze_sha256": "1885d04dc7f9ef5e04a948609e8709617a2ede33f67ac4d883cf0256adef0152",
+  "confirmation_cache_freeze_sha256": "072fb07d87f970dc3097d89cdef4ab45e2ce05766bb5ab813c17527982fe761e",
+  "fresh_scene_csv_sha256": "7025c9ea47f840c9d7c0123cfed118699f688112f4ba2609eab6d713a8670807",
+  "no_assets_downloaded": true
+}
